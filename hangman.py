@@ -1,62 +1,12 @@
 import random
-stages = [r'''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', r'''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', r'''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+import hangman_words
+import hangman_art
 
-word_list = ["aardvark", "baboon", "camel"]
+stages = hangman_art.stages
+logo = hangman_art.logo
+
+print(logo)
+word_list = hangman_words.word_list
 
 chosen_word = random.choice(word_list)
 print(chosen_word)
